@@ -1,0 +1,262 @@
+/* .window{
+    padding: 1%;
+    width: 100%;
+    height: 100vh;
+}
+
+.heading{
+    padding: 2%;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    padding: 1%;
+    border-top: 3px solid black ;
+    border-bottom: 3px solid black ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.navtitle{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .searchtabs {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15rem;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchtab {
+    background-color: aquamarine;
+    border-radius: 1%;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.search-input{
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+}
+
+.search-input:hover{
+    opacity: 100%;
+} */
+
+.window {
+    padding: 1%;
+    width: 100%;
+    height: 100vh;
+}
+
+.heading {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    padding: 1%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.navtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;font-family: Arial, sans-serif; /* Change font */
+    text-decoration: none;
+    color: black; /* Change text color */
+    padding: 10px; /* Add padding */
+    transition: color 0.3s ease; /* Add transition effect */
+}
+
+.navtitle:hover {
+    color: #555; /* Change text color on hover */
+}
+
+
+.navtitle:active {
+    color: #FF5733; /* Change color for active link */
+    font-weight: bold; /* Add font weight for active link */
+}
+
+
+.searchtabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.searchtab {
+    position: relative;
+    background-color: var(--quaternary-color);
+    border-radius: 20px;
+    padding: 60px; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.searchtab:hover {
+    transform: translateY(-5px);
+}
+
+.statement {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.searchtab:hover .statement {
+    opacity: 0;
+}
+
+.search-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 80%; /* Adjusted width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade-in effect */
+}
+
+.searchtab:hover .search-input {
+    opacity: 1; /* Show on hover */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-input input,
+.search-input button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-input input {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    flex: 1; /* Adjusted */
+}
+
+.search-input button {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    padding: 15px 25px; /* Adjusted padding */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.search-input button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.search-input button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px var(--accent-color); /* Add custom focus effect */
+}
+
+/* Text styles for non-hover state */
+.searchtab:not(:hover) h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Text styles for hover state */
+.searchtab:hover h3 {
+    display: none;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-item {
+    text-align: center;
+}
+
+.img {
+    max-width: 100%; 
+    max-height: 150px; 
+}
+
+.q{
+    width: 100%;
+}
+
+.favorites-container {
+    padding: 20px;
+}
+
+.favorites-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.recipe-item {
+    text-align: center;
+}
+
+.recipe-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recipe-details {
+    padding: 10px;
+}
+
